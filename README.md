@@ -4,8 +4,8 @@
 ---
 ####             Uso
 ---
-    git clone https://github.com/MarcusMiguel/Angular_SPA.git
-    cd Angular_SPA
+    git clone https://github.com/MarcusMiguel/AngularSPA.git
+    cd AngularSPA
     npm install
     ng serve -o    
 ---
