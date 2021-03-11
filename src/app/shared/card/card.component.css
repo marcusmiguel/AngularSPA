@@ -4,19 +4,26 @@
   }
   
 .example-card {
-    height: 550px;
+    height: 520px;
     width: 400px;
     margin-top: 30px;
   }
   
   .mat-card-image{
-    height: 300px;
+    height: 250px;
   }
   
   .mat-card-actions{
     margin-left: 300px;
+    margin-top: -10px;
+    display: flex;
   }
 
+  .fav2{
+    margin-top: 8px;
+  }
+
+  
 @media (max-width: 499px)
 {
     .example-card {

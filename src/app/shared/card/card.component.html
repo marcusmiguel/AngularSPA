@@ -17,15 +17,17 @@
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-fab (click)="onFavorited()">
-            <div *ngIf="!favorited">
-                <mat-icon color="primary">favorite</mat-icon>
-            </div>
-            <div *ngIf="favorited">
-                <mat-icon color="warn">favorite</mat-icon>
-            </div>
-        </button>
-        <button mat-icon-button class=" example-icon" aria-label="Example icon-button with share icon">
+        <div>
+            <button mat-icon-button (click)="onFavorited()" class="fav">
+                <div *ngIf="!favorited">
+                    <mat-icon class="fav2" color="primary">favorite</mat-icon>
+                </div>
+                <div *ngIf="favorited">
+                    <mat-icon class="fav2" color="warn">favorite</mat-icon>
+                </div>
+            </button>
+        </div>
+        <button mat-icon-button (click)="openDialog()" class="fav3">
             <mat-icon>share</mat-icon>
         </button>
     </mat-card-actions>
