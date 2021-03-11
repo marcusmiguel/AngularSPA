@@ -1,0 +1,30 @@
+.example-spacer {
+    flex: 1 1 auto;
+}   
+
+.mat-toolbar{ 
+  z-index: 10;
+  width: 100%;
+
+}
+
+.mat-icon-button{
+    margin-right: 5px;
+}
+
+.search-input{
+    height: 32px;
+    margin-right: 20px;
+    width: 300px;
+}
+.searchicon{
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+@media (max-width: 499px)
+{
+    .mat-toolbar{
+        width: 100%;
+    }
+}
