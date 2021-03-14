@@ -9,6 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTabsModule } from '@angular/material/tabs';
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { CardComponent } from './shared/card/card.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
+import { PostComponent } from './shared/post/post.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { DialogComponent } from './shared/dialog/dialog.component';
     HomeComponent,
     ToolbarComponent,
     CardComponent,
-    DialogComponent
+    DialogComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { DialogComponent } from './shared/dialog/dialog.component';
     MatFormFieldModule,
     MatDialogModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTabsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

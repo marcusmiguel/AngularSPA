@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DialogComponent } from '../dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -9,12 +9,12 @@ import { MatDialog } from '@angular/material/dialog';
 })
 
 export class CardComponent {
-  img: number;
-  favorited: boolean;
+  @Input() img = ""
+  @Input() msg = ""
+  favorited: boolean
 
   constructor(private dialog: MatDialog) {
     this.favorited = false;
-    this.img = Math.floor((Math.random() * 100) + 1);
   }
 
   onFavorited() {

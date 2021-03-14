@@ -1,6 +1,6 @@
 <mat-toolbar class="mat-toolbar sticky-nav" ngStickyNav ngStickyNav>
-    <button mat-icon-button class="example-icon" (click)="onActivate()">
-        <mat-icon matBadge="8" matBadgePosition="after" matBadgeColor="accent">home</mat-icon>
+    <button *ngIf="showButton" mat-icon-button class="example-icon" (click)="onActivate()">
+        <mat-icon>keyboard_arrow_up</mat-icon>
     </button>
     <span class="example-spacer"></span>
     <span class="example-spacer"></span>

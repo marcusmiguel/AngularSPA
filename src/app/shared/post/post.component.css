@@ -1,0 +1,45 @@
+.example-card {
+    height: 250px;
+    width: 400px;
+    margin-top: 20px;
+  }
+
+
+input{
+width: 98%;
+}
+mat-card-content{
+height: 150px;
+
+}
+
+textarea{
+  width: 98%;
+  height: 110px;
+  }
+
+.message{
+  margin-top: 20px;
+}
+    
+.container{
+  height: 800px;
+  position: fixed;
+    background: url('../../../assets/images/FreeVector-Vector-Sky-Background.jpg')  no-repeat scroll;
+    background-size: cover;
+    background-attachment:fixed;
+  width: 5000px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+mat-card-actions{
+  margin-top: 50px;
+  align-self: center;
+}
+
+button{
+  width: 65px;
+  margin-left: 345px;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'spa-toolbar',
@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ToolbarComponent {
+  @Output() moveUp = new EventEmitter();
+
+  @Input() showButton = false
+
   onActivate() {
     window.scroll(0, 0);
   }
