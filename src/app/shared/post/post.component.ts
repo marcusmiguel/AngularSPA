@@ -18,7 +18,4 @@ export class PostComponent {
     this.msg = ""
     this.redirect.emit("")
   }
-
-
-
 }

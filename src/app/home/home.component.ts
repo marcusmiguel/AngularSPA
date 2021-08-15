@@ -1,28 +1,36 @@
-import { Component, OnInit, Output, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, Output, HostListener, ElementRef, ViewChild } from '@angular/core'
+import { PostService } from '../service/post.service'
+import { Post } from '../model/Post'
 
 @Component({
   selector: 'spa-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   showButton = false
-  lorem: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur"
   activetab: { num: 0 }
+  posts: Post[]
+  constructor(private postService: PostService) { }
 
-  posts = Array.from(
-    [{ img: "https://picsum.photos/id/10/900", msg: this.lorem },
-    { img: "https://picsum.photos/id/20/900", msg: this.lorem },
-    { img: "https://picsum.photos/id/30/900", msg: this.lorem },
-    { img: "https://picsum.photos/id/40/900", msg: this.lorem },
-    { img: "https://picsum.photos/id/50/900", msg: this.lorem },
-    { img: "https://picsum.photos/id/60/900", msg: this.lorem },
-    { img: "https://picsum.photos/id/70/900", msg: this.lorem },
-    ])
-
-  criarPost(x) {
-    this.posts = [x, ...this.posts]
+  ngOnInit(): void {
+    this.findPosts()
   }
+
+  findPosts() {
+    this.postService.getPosts().subscribe((data: Post[]) => {
+      this.posts = data.reverse();
+    })
+  }
+
+  criarPost(post: Post) {
+    this.posts = [post, ...this.posts]
+    this.postService.postMessage(post)
+      .subscribe((data: Post) => {
+        console.log(data)
+      })
+  }
+
   handleRedirect(x) {
     this.activetab = { num: 0 }
   }
@@ -35,9 +43,7 @@ export class HomeComponent {
     } else {
       this.showButton = false
     }
-
   }
-
 
 }
 

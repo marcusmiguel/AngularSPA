@@ -19,6 +19,7 @@ import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { CardComponent } from './shared/card/card.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
 import { PostComponent } from './shared/post/post.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PostComponent } from './shared/post/post.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatTabsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

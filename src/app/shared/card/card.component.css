@@ -28,6 +28,6 @@
 {
     .example-card {
         height: 550px;
-        width:fit-content;
+        width: 100%;
       }
 }
