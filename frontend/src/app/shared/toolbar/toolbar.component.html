@@ -1,0 +1,14 @@
+<mat-toolbar class="mat-toolbar sticky-nav" ngStickyNav ngStickyNav>
+    <button *ngIf="showButton" mat-icon-button class="example-icon" (click)="onActivate()">
+        <mat-icon>keyboard_arrow_up</mat-icon>
+    </button>
+    <span class="example-spacer"></span>
+    <span class="example-spacer"></span>
+    <input matInput type="search" placeholder="Search something..." class="search-input">
+    <button mat-icon-button class="example-icon favorite-icon">
+        <mat-icon>settings</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon favorite-icon">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>

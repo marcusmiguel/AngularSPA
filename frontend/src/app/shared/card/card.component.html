@@ -1,0 +1,30 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <div *ngIf="img != ''" class="div-img">
+        <img mat-card-image src={{img}} alt="Photo">
+    </div>
+    <mat-card-content>
+        <p>
+            {{msg}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <div>
+            <button mat-icon-button (click)="onFavorited()" class="fav">
+                <div *ngIf="!favorited">
+                    <mat-icon class="fav2" color="primary">favorite</mat-icon>
+                </div>
+                <div *ngIf="favorited">
+                    <mat-icon class="fav2" color="warn">favorite</mat-icon>
+                </div>
+            </button>
+        </div>
+        <button mat-icon-button (click)="openDialog()" class="fav3">
+            <mat-icon>share</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

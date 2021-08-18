@@ -1,0 +1,22 @@
+<div>
+    <spa-toolbar [showButton]="showButton"></spa-toolbar>
+    <mat-tab-group animationDuration="0ms" [selectedIndex]="activetab">
+        <mat-tab #myDiv id="myDiv">
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon" matBadge="6" matBadgePosition="after" matBadgeColor="accent">feed
+                </mat-icon>
+            </ng-template>
+            <div class="background" *ngFor="let post of posts">
+                <spa-card [img]="post.img" [msg]="post.msg" class="spa"></spa-card>
+            </div>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon class="example-tab-icon">post_add </mat-icon>
+            </ng-template>
+            <div class="background">
+                <spa-post class="spa" (novopost)="criarPost($event)" (redirect)="handleRedirect($event)"></spa-post>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+</div>
